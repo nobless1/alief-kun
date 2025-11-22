@@ -1,7 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useActionState, useEffect, useRef, useState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { handleGenerateStatement } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -28,7 +28,7 @@ function SubmitButton() {
 }
 
 export function AiGenerator() {
-  const [state, formAction] = useFormState(handleGenerateStatement, initialState);
+  const [state, formAction] = useActionState(handleGenerateStatement, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
   const [generatedStatement, setGeneratedStatement] = useState<string | null>(null);
