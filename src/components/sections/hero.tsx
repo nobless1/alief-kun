@@ -20,8 +20,8 @@ export function Hero() {
             </Button>
             <Button variant="outline" asChild>
               <a href={`mailto:${profile.email}`}>
-                <profile.socialIcons.mail className="mr-2 h-4 w-4" />
-                Hubungi Saya
+                <profile.socialIcons.mail />
+                <span>Hubungi Saya</span>
               </a>
             </Button>
           </div>

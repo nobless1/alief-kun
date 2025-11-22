@@ -54,13 +54,13 @@ export function Projects() {
                 <Button variant="outline" asChild>
                   <Link href={project.links.github} target="_blank">
                     <Github />
-                    Pelajari Lebih Lanjut
+                    <span>Pelajari Lebih Lanjut</span>
                   </Link>
                 </Button>
                 <Button asChild>
                   <Link href={project.links.live} target="_blank">
                     <ExternalLink />
-                    Lihat Proyek
+                    <span>Lihat Proyek</span>
                   </Link>
                 </Button>
               </CardFooter>
