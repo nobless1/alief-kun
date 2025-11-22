@@ -27,8 +27,8 @@ const age = calculateAge('2004-09-09');
 
 export const profile = {
   name: 'alief',
-  title: 'Kepala Barista & Pengrajin Kopi',
-  bio: `Seorang barista berumur ${age} tahun yang bersemangat dengan kecintaan mendalam pada seni dan ilmu kopi. Berdedikasi untuk menciptakan cangkir yang sempurna dan pengalaman yang tak terlupakan bagi setiap pelanggan.`,
+  title: 'Barista Junior & Pecinta Kopi',
+  bio: `Seorang barista junior berumur ${age} tahun yang antusias, dengan semangat besar untuk belajar seni dan ilmu kopi. Berkomitmen untuk menyajikan kopi terbaik dan memberikan pengalaman menyenangkan bagi pelanggan.`,
   email: 'hello@alief.coffee',
   social: {
     github: 'https://github.com',
@@ -152,26 +152,26 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     type: 'work',
-    title: 'Kepala Barista',
+    title: 'Barista',
     company: 'The Daily Grind',
-    date: 'Jan 2021 - Sekarang',
-    description: 'Memimpin tim barista, menyusun menu kopi, dan menjaga standar kualitas. Bertanggung jawab atas pelatihan dan manajemen inventaris.',
+    date: 'Jan 2022 - Sekarang',
+    description: 'Menyiapkan dan menyajikan minuman kopi berkualitas. Membantu pelatihan barista baru dan memastikan kepuasan pelanggan.',
     icon: Briefcase,
   },
   {
     type: 'work',
-    title: 'Barista',
+    title: 'Asisten Barista',
     company: 'Artisan Roast Cafe',
-    date: 'Jun 2018 - Des 2020',
-    description: 'Mengasah keterampilan saya dalam persiapan espresso dan seni latte. Mengembangkan pemahaman yang kuat tentang berbagai metode penyeduhan dan preferensi pelanggan.',
+    date: 'Jun 2021 - Des 2021',
+    description: 'Mendukung tim barista, mempelajari dasar-dasar espresso dan menjaga kebersihan area kerja. Mulai belajar teknik seni latte.',
     icon: Coffee,
   },
   {
     type: 'education',
     title: 'Barista Bersertifikat',
     company: 'Specialty Coffee Association (SCA)',
-    date: 'Mei 2018',
-    description: 'Menyelesaikan tingkat Foundation dan Intermediate Keterampilan Barista SCA, mencakup asal-usul kopi, penyeduhan, dan keterampilan sensorik.',
+    date: 'Mei 2021',
+    description: 'Menyelesaikan tingkat Foundation Keterampilan Barista SCA, mencakup dasar-dasar asal-usul kopi, penyeduhan, dan kebersihan.',
     icon: GraduationCap,
   },
 ];
