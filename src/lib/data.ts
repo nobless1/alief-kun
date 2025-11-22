@@ -16,7 +16,7 @@ import type { LucideIcon } from 'lucide-react';
 import { PlaceHolderImages } from './placeholder-images';
 
 export const profile = {
-  name: 'Alex Doe',
+  name: 'alief',
   title: 'Full-Stack Developer & AI Enthusiast',
   bio: 'A passionate developer with a knack for building beautiful, functional, and scalable web applications. Currently exploring the fascinating world of Generative AI to create smarter and more personalized user experiences.',
   email: 'hello@alexdoe.com',
