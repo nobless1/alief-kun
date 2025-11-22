@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "project-one",
+      "description": "Abstract representation of a web application.",
+      "imageUrl": "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2ViJTIwYXBwbGljYXRpb258ZW58MHx8fHwxNzYzNzU1NzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web application"
+    },
+    {
+      "id": "project-two",
+      "description": "A mobile application interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzYzNzcyMzg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "project-three",
+      "description": "Data visualization dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc2Mzc4ODk4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data dashboard"
+    },
+    {
+      "id": "project-four",
+      "description": "E-commerce store front.",
+      "imageUrl": "https://images.unsplash.com/photo-1688561807426-87333ae6e6c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxlY29tbWVyY2UlMjBzdG9yZXxlbnwwfHx8fDE3NjM3MTAwMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ecommerce store"
+    }
+  ]
 }
