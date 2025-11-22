@@ -19,10 +19,10 @@ export function Projects() {
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-            Featured Projects
+            Featured Creations
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            A selection of my work. Each project showcases my ability to solve problems, write clean code, and deliver engaging user experiences.
+            A selection of my coffee-related projects. Each one showcases my dedication to the craft and my passion for sharing it with others.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2 justify-items-center">
@@ -54,13 +54,13 @@ export function Projects() {
                 <Button variant="outline" asChild>
                   <Link href={project.links.github} target="_blank">
                     <Github />
-                    GitHub
+                    Learn More
                   </Link>
                 </Button>
                 <Button asChild>
                   <Link href={project.links.live} target="_blank">
                     <ExternalLink />
-                    Live Demo
+                    View Project
                   </Link>
                 </Button>
               </CardFooter>

@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'PersonaCraft - AI-Powered Portfolio',
-  description: 'Craft your professional story with an AI-powered portfolio.',
+  title: 'alief - The Coffee Craftsman',
+  description: 'Explore the portfolio of a passionate barista, showcasing skills in coffee brewing, latte art, and customer experience.',
 };
 
 export default function RootLayout({

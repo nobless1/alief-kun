@@ -5,10 +5,10 @@ import { profile } from '@/lib/data';
 export function Hero() {
   return (
     <section id="home" className="bg-secondary/50 border-b flex items-center justify-center">
-      <div className="container flex flex-col items-center justify-center text-center">
+      <div className="container flex flex-col items-center justify-center space-y-4 text-center">
         <div className="flex flex-col items-center space-y-6">
           <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-            {profile.name}
+            alief
           </h1>
           <p className="text-primary font-medium">{profile.title}</p>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -16,7 +16,7 @@ export function Hero() {
           </p>
           <div className="flex gap-4">
             <Button asChild>
-              <a href="#projects">View My Work</a>
+              <a href="#projects">View My Creations</a>
             </Button>
             <Button variant="outline" asChild>
               <a href={`mailto:${profile.email}`}>

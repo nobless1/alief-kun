@@ -13,13 +13,13 @@ export function Skills() {
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-            My Technical Skills
+            My Barista Skills
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I have a diverse skill set that allows me to tackle challenges across the full stack, from crafting beautiful UIs to architecting robust backend systems.
+            I have a diverse set of skills, from technical brewing knowledge to the art of creating a welcoming cafe atmosphere.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 justify-items-center">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
           {skills.map((category) => (
             <Card key={category.name} className="w-full max-w-lg">
               <CardHeader>

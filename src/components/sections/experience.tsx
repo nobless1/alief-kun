@@ -6,10 +6,10 @@ export function Experience() {
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-16">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-            My Journey
+            My Journey in Coffee
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Following my path in technology, from education to professional roles, highlighting key milestones and achievements along the way.
+            From my first sip to becoming a head barista, here are the key moments that have shaped my career and passion for coffee.
           </p>
         </div>
         <div className="relative">

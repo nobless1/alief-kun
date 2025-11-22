@@ -1,15 +1,12 @@
 import {
-  AppWindow,
   Briefcase,
-  Code,
-  Database,
-  ExternalLink,
-  Github,
+  Coffee,
   GraduationCap,
+  Heart,
+  Award,
+  Github,
   Linkedin,
   Mail,
-  Server,
-  Settings,
   Twitter,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
@@ -17,9 +14,9 @@ import { PlaceHolderImages } from './placeholder-images';
 
 export const profile = {
   name: 'alief',
-  title: 'Full-Stack Developer & AI Enthusiast',
-  bio: 'A passionate developer with a knack for building beautiful, functional, and scalable web applications. Currently exploring the fascinating world of Generative AI to create smarter and more personalized user experiences.',
-  email: 'hello@alexdoe.com',
+  title: 'Head Barista & Coffee Artisan',
+  bio: 'A passionate barista with a deep love for the art and science of coffee. Dedicated to crafting the perfect cup and creating memorable experiences for every customer.',
+  email: 'hello@alief.coffee',
   social: {
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -46,9 +43,9 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'QuantumLeap CRM',
-    description: 'A comprehensive CRM platform designed for modern sales teams, featuring contact management, deal tracking, and automated workflows.',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
+    title: 'The Morning Grind Blog',
+    description: 'A personal blog where I share brewing guides, coffee bean reviews, and my thoughts on the coffee industry. Built to connect with fellow coffee lovers.',
+    technologies: ['Contentful', 'Markdown', 'SEO', 'Photography'],
     links: {
       github: '#',
       live: '#',
@@ -56,9 +53,9 @@ export const projects: Project[] = [
     image: PlaceHolderImages.find((img) => img.id === 'project-one')!,
   },
   {
-    title: 'EchoWave Social',
-    description: 'A decentralized social media application focused on user privacy and data ownership, built with cutting-edge web3 technologies.',
-    technologies: ['React', 'Vite', 'Solidity', 'ethers.js', 'IPFS'],
+    title: 'Latte Art Lookbook App',
+    description: 'A mobile-first web app showcasing a gallery of my best latte art. Includes tips and video tutorials for aspiring latte artists.',
+    technologies: ['React', 'Vite', 'PWA', 'Video Editing'],
     links: {
       github: '#',
       live: '#',
@@ -66,9 +63,9 @@ export const projects: Project[] = [
     image: PlaceHolderImages.find((img) => img.id === 'project-two')!,
   },
   {
-    title: 'Aura Analytics',
-    description: 'An analytics dashboard that provides real-time insights into user behavior and application performance, with customizable reports and alerts.',
-    technologies: ['SvelteKit', 'Go', 'gRPC', 'ClickHouse', 'Grafana'],
+    title: 'Cafe Workflow Optimizer',
+    description: 'A Notion-based system to track inventory, manage staff schedules, and streamline daily operations for a busy coffee shop.',
+    technologies: ['Notion API', 'Automation', 'Inventory Management'],
     links: {
       github: '#',
       live: '#',
@@ -76,9 +73,9 @@ export const projects: Project[] = [
     image: PlaceHolderImages.find((img) => img.id === 'project-three')!,
   },
   {
-    title: 'Zenith E-Commerce',
-    description: 'A headless e-commerce solution offering a fast, flexible, and rich shopping experience, integrated with multiple payment gateways.',
-    technologies: ['Vue.js', 'Nuxt.js', 'Stripe', 'Shopify API', 'GraphQL'],
+    title: 'Local Roaster Collab',
+    description: 'A pop-up event series in collaboration with local roasters to highlight unique single-origin beans and brewing methods.',
+    technologies: ['Event Planning', 'Social Media Marketing', 'Community Building'],
     links: {
       github: '#',
       live: '#',
@@ -98,43 +95,34 @@ export type SkillCategory = {
 
 export const skills: SkillCategory[] = [
   {
-    name: 'Frontend',
-    icon: Code,
+    name: 'Coffee Brewing',
+    icon: Coffee,
     skills: [
-      { name: 'React / Next.js', level: 95 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'Tailwind CSS', level: 95 },
-      { name: 'JavaScript (ES6+)', level: 85 },
-      { name: 'HTML5 & CSS3', level: 98 },
+      { name: 'Espresso Extraction & Dialing-In', level: 95 },
+      { name: 'Pour-Over (V60, Chemex)', level: 90 },
+      { name: 'Aeropress & French Press', level: 85 },
+      { name: 'Cold Brew Science', level: 90 },
+      { name: 'Manual & Automatic Grinders', level: 98 },
     ],
   },
   {
-    name: 'Backend',
-    icon: Server,
+    name: 'Latte Art',
+    icon: Heart,
     skills: [
-      { name: 'Node.js / Express', level: 80 },
-      { name: 'Python / Django', level: 70 },
-      { name: 'Prisma / TypeORM', level: 85 },
-      { name: 'REST & GraphQL APIs', level: 90 },
+      { name: 'Milk Steaming & Microfoam', level: 95 },
+      { name: 'Heart & Tulip Patterns', level: 90 },
+      { name: 'Rosetta & Swan Patterns', level: 80 },
+      { name: 'Free Pouring Techniques', level: 85 },
     ],
   },
   {
-    name: 'Databases',
-    icon: Database,
+    name: 'Customer Service',
+    icon: Award,
     skills: [
-      { name: 'PostgreSQL', level: 85 },
-      { name: 'MongoDB', level: 75 },
-      { name: 'Redis', level: 65 },
-    ],
-  },
-  {
-    name: 'Tools & DevOps',
-    icon: Settings,
-    skills: [
-      { name: 'Git & GitHub', level: 95 },
-      { name: 'Docker', level: 75 },
-      { name: 'Vercel / Netlify', level: 90 },
-      { name: 'Figma', level: 80 },
+      { name: 'Coffee Knowledge & Education', level: 95 },
+      { name: 'Order Management (POS Systems)', level: 90 },
+      { name: 'Building Customer Rapport', level: 100 },
+      { name: 'Upselling & Recommendations', level: 85 },
     ],
   },
 ];
@@ -151,34 +139,34 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     type: 'work',
-    title: 'Senior Frontend Developer',
-    company: 'Stellar Solutions Inc.',
+    title: 'Head Barista',
+    company: 'The Daily Grind',
     date: 'Jan 2021 - Present',
-    description: 'Led the development of a large-scale analytics dashboard. Mentored junior developers and improved code quality and deployment pipelines.',
+    description: 'Leading a team of baristas, curating the coffee menu, and maintaining quality standards. Responsible for training and inventory management.',
     icon: Briefcase,
   },
   {
     type: 'work',
-    title: 'Full-Stack Developer',
-    company: 'Innovatech Labs',
+    title: 'Barista',
+    company: 'Artisan Roast Cafe',
     date: 'Jun 2018 - Dec 2020',
-    description: 'Developed and maintained features for a suite of SaaS products using React and Node.js. Contributed to a 20% improvement in application performance.',
-    icon: Briefcase,
+    description: 'Honed my skills in espresso preparation and latte art. Developed a strong understanding of different brewing methods and customer preferences.',
+    icon: Coffee,
   },
   {
     type: 'education',
-    title: 'B.Sc. in Computer Science',
-    company: 'University of Technology',
-    date: 'Sep 2014 - May 2018',
-    description: 'Graduated with honors. Specialized in human-computer interaction and artificial intelligence. President of the coding club.',
+    title: 'Certified Barista',
+    company: 'Specialty Coffee Association (SCA)',
+    date: 'May 2018',
+    description: 'Completed the SCA Barista Skills Foundation and Intermediate levels, covering coffee origins, brewing, and sensory skills.',
     icon: GraduationCap,
   },
 ];
 
 export const navigation = [
-  { name: 'Projects', href: '#projects' },
+  { name: 'Creations', href: '#projects' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
+  { name: 'Journey', href: '#experience' },
   { name: 'AI Generator', href: '#ai-generator' },
   { name: 'Contact', href: '#contact' },
 ];
