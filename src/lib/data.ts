@@ -12,23 +12,10 @@ import {
 import type { LucideIcon } from 'lucide-react';
 import { PlaceHolderImages } from './placeholder-images';
 
-function calculateAge(birthDate: string) {
-  const today = new Date();
-  const birth = new Date(birthDate);
-  let age = today.getFullYear() - birth.getFullYear();
-  const m = today.getMonth() - birth.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
-    age--;
-  }
-  return age;
-}
-
-const age = calculateAge('2004-09-09');
-
 export const profile = {
   name: 'alief',
   title: 'Barista Junior & Pecinta Kopi',
-  bio: `Seorang barista junior berumur ${age} tahun yang antusias, dengan semangat besar untuk belajar seni dan ilmu kopi. Berkomitmen untuk menyajikan kopi terbaik dan memberikan pengalaman menyenangkan bagi pelanggan.`,
+  bio: `Seorang barista junior yang antusias, dengan semangat besar untuk belajar seni dan ilmu kopi. Berkomitmen untuk menyajikan kopi terbaik dan memberikan pengalaman menyenangkan bagi pelanggan.`,
   email: 'hello@alief.coffee',
   social: {
     github: 'https://github.com',
