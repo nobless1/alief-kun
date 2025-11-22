@@ -2,7 +2,7 @@ import { experience } from '@/lib/data';
 
 export function Experience() {
   return (
-    <section id="experience" className="border-b">
+    <section id="experience" className="border-b flex justify-center">
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-16">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
