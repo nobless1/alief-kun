@@ -37,7 +37,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact">
+    <section id="contact" className="flex items-center justify-center">
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
