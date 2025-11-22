@@ -12,25 +12,30 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 flex">
+      <div className="container flex h-14 items-center justify-between">
+        <div className="flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Bot className="h-6 w-6 text-primary" />
             <span className="font-bold font-headline">PersonaCraft</span>
           </Link>
-          <nav className="hidden gap-6 md:flex">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
         </div>
-        <div className="flex flex-1 items-center justify-end">
+
+        <nav className="hidden items-center gap-6 md:flex">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-2">
+           <Button asChild className="hidden md:flex">
+            <a href="#contact">Get in Touch</a>
+          </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
@@ -58,13 +63,13 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
+                   <Button asChild>
+                    <a href="#contact">Get in Touch</a>
+                  </Button>
                 </div>
               </div>
             </SheetContent>
           </Sheet>
-          <Button asChild className="hidden md:flex">
-            <a href="#contact">Get in Touch</a>
-          </Button>
         </div>
       </div>
     </header>
