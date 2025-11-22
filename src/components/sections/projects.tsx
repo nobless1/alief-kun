@@ -15,7 +15,7 @@ import { Github, ExternalLink } from 'lucide-react';
 
 export function Projects() {
   return (
-    <section id="projects" className="border-b">
+    <section id="projects" className="border-b flex justify-center">
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
@@ -25,9 +25,9 @@ export function Projects() {
             A selection of my work. Each project showcases my ability to solve problems, write clean code, and deliver engaging user experiences.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2 justify-items-center">
           {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col">
+            <Card key={project.title} className="flex flex-col max-w-lg">
               <CardHeader>
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
