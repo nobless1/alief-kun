@@ -16,7 +16,45 @@ export function Header() {
   }, []);
 
   if (!isMounted) {
-    return null;
+    // Render a placeholder or null on the server to avoid mismatch
+    return (
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-14 items-center justify-between">
+          <div className="flex items-center">
+            <Link href="/" className="mr-6 flex items-center space-x-2">
+              <Bot className="h-6 w-6 text-primary" />
+              <span className="font-bold font-headline">PersonaCraft</span>
+            </Link>
+          </div>
+          <div className="flex items-center gap-2 md:hidden">
+             <Button
+                variant="ghost"
+                className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+              >
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Buka Menu</span>
+              </Button>
+          </div>
+          <nav className="hidden items-center gap-6 md:flex">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden items-center gap-2 md:flex">
+            <Button asChild>
+              <a href="#contact">Hubungi Saya</a>
+            </Button>
+          </div>
+        </div>
+      </header>
+    );
   }
 
   return (
@@ -73,7 +111,7 @@ export function Header() {
                     </Link>
                   ))}
                    <Button asChild>
-                    <a href="#contact">Hubungi Saya</a>
+                    <a href="#contact" onClick={() => setIsOpen(false)}>Hubungi Saya</a>
                   </Button>
                 </div>
               </div>
