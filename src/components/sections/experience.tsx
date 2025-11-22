@@ -17,7 +17,7 @@ export function Experience() {
           {experience.map((item, index) => (
             <div key={item.title} className="relative mb-12">
               <div className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                <div className={`w-full max-w-lg ${index % 2 === 0 ? 'text-right pr-8 ml-auto' : 'text-left pl-8 mr-auto'}`}>
                   <div className="p-4 rounded-lg border bg-card text-card-foreground shadow-sm">
                     <h3 className="text-lg font-bold font-headline">{item.title}</h3>
                     <p className="text-sm font-semibold text-primary">{item.company}</p>
