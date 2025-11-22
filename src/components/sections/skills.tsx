@@ -19,9 +19,9 @@ export function Skills() {
             I have a diverse skill set that allows me to tackle challenges across the full stack, from crafting beautiful UIs to architecting robust backend systems.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 justify-items-center">
           {skills.map((category) => (
-            <Card key={category.name}>
+            <Card key={category.name} className="w-full max-w-lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 font-headline">
                   <category.icon className="h-6 w-6 text-primary" />
