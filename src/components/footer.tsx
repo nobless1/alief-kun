@@ -7,10 +7,16 @@ import { profile } from '@/lib/data';
 
 export function Footer() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     setCurrentYear(new Date().getFullYear());
   }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <footer className="border-t">
