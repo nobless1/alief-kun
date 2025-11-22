@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -9,63 +9,14 @@ import { navigation } from '@/lib/data';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    // Render a placeholder or null on the server to avoid mismatch
-    return (
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-              <Bot className="h-6 w-6 text-primary" />
-              <span className="font-bold font-headline">PersonaCraft</span>
-            </Link>
-          </div>
-          <div className="flex items-center gap-2 md:hidden">
-             <Button
-                variant="ghost"
-                className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
-              >
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Buka Menu</span>
-              </Button>
-          </div>
-          <nav className="hidden items-center gap-6 md:flex">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="hidden items-center gap-2 md:flex">
-            <Button asChild>
-              <a href="#contact">Hubungi Saya</a>
-            </Button>
-          </div>
-        </div>
-      </header>
-    );
-  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
-        <div className="flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Bot className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline">PersonaCraft</span>
-          </Link>
-        </div>
+        <Link href="/" className="flex items-center space-x-2">
+          <Bot className="h-6 w-6 text-primary" />
+          <span className="font-bold font-headline">PersonaCraft</span>
+        </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
           {navigation.map((item) => (
@@ -84,10 +35,11 @@ export function Header() {
             <a href="#contact">Hubungi Saya</a>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
+            <SheetTrigger asChild className="md:hidden">
               <Button
                 variant="ghost"
-                className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+                size="icon"
+                className="md:hidden"
               >
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Buka Menu</span>
@@ -98,8 +50,7 @@ export function Header() {
                 <Bot className="h-6 w-6 text-primary" />
                 <span className="font-bold font-headline">PersonaCraft</span>
               </Link>
-              <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-                <div className="flex flex-col space-y-3">
+              <div className="my-4 flex h-[calc(100vh-8rem)] flex-col space-y-3 pb-10 pl-6">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
@@ -113,7 +64,6 @@ export function Header() {
                    <Button asChild>
                     <a href="#contact" onClick={() => setIsOpen(false)}>Hubungi Saya</a>
                   </Button>
-                </div>
               </div>
             </SheetContent>
           </Sheet>
