@@ -2,27 +2,27 @@
   "placeholderImages": [
     {
       "id": "project-one",
-      "description": "Abstract representation of a web application.",
-      "imageUrl": "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2ViJTIwYXBwbGljYXRpb258ZW58MHx8fHwxNzYzNzU1NzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "web application"
+      "description": "Seorang barista sedang menuangkan seni latte.",
+      "imageUrl": "https://images.unsplash.com/photo-1511920170033-f832d74d1be7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWV8ZW58MHx8fHwxNzY0MDQxMjg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "latte art"
     },
     {
       "id": "project-two",
-      "description": "A mobile application interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzYzNzcyMzg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mobile app"
+      "description": "Biji kopi yang baru disangrai dalam sebuah sendok.",
+      "imageUrl": "https://images.unsplash.com/photo-1495474472287-4d713b22e8a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb2ZmZWV8ZW58MHx8fHwxNzY0MDQxMjg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee beans"
     },
     {
       "id": "project-three",
-      "description": "Data visualization dashboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc2Mzc4ODk4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data dashboard"
+      "description": "Sebuah kedai kopi dengan suasana yang nyaman.",
+      "imageUrl": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2ZmZWUlMjBzaG9wfGVufDB8fHx8MTc2NDA0MTMyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee shop"
     },
     {
       "id": "project-four",
-      "description": "E-commerce store front.",
-      "imageUrl": "https://images.unsplash.com/photo-1688561807426-87333ae6e6c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxlY29tbWVyY2UlMjBzdG9yZXxlbnwwfHx8fDE3NjM3MTAwMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ecommerce store"
+      "description": "Metode penyeduhan kopi pour-over dari dekat.",
+      "imageUrl": "https://images.unsplash.com/photo-1545665225-b23b99e4d43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3VyJTIwb3ZlciUyMGNvZmZlZXxlbnwwfHx8fDE3NjQwNDE0MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pour-over coffee"
     }
   ]
 }
