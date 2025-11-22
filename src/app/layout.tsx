@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'alief - Pengrajin Kopi',
+  title: 'Alief - Pengrajin Kopi',
   description: 'Jelajahi portofolio seorang barista yang bersemangat, menampilkan keahlian dalam menyeduh kopi, seni latte, dan pengalaman pelanggan.',
 };
 

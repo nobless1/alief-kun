@@ -13,7 +13,7 @@ import type { LucideIcon } from 'lucide-react';
 import { PlaceHolderImages } from './placeholder-images';
 
 export const profile = {
-  name: 'alief',
+  name: 'Alief',
   title: 'Barista Junior & Pecinta Kopi',
   bio: `Seorang barista junior yang antusias, dengan semangat besar untuk belajar seni dan ilmu kopi. Berkomitmen untuk menyajikan kopi terbaik dan memberikan pengalaman menyenangkan bagi pelanggan.`,
   email: 'hello@alief.coffee',

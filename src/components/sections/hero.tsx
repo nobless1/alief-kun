@@ -8,7 +8,7 @@ export function Hero() {
       <div className="container flex flex-col items-center justify-center space-y-4 text-center">
         <div className="flex flex-col items-center space-y-6">
           <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-            alief
+            Alief
           </h1>
           <p className="text-primary font-medium">{profile.title}</p>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
