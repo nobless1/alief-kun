@@ -14,13 +14,13 @@ import {z} from 'genkit';
 const GeneratePersonalStatementInputSchema = z.object({
   skills: z
     .string()
-    .describe('A comma-separated list of skills.'),
+    .describe('Daftar keahlian yang dipisahkan koma.'),
   experience: z
     .string()
-    .describe('A summary of relevant experience.'),
+    .describe('Ringkasan pengalaman yang relevan.'),
   targetAudience: z
     .string()
-    .describe('The intended audience for the personal statement.'),
+    .describe('Audiens yang dituju untuk pernyataan pribadi.'),
 });
 export type GeneratePersonalStatementInput = z.infer<
   typeof GeneratePersonalStatementInputSchema
@@ -29,7 +29,7 @@ export type GeneratePersonalStatementInput = z.infer<
 const GeneratePersonalStatementOutputSchema = z.object({
   personalStatement: z
     .string()
-    .describe('The generated personalized personal statement.'),
+    .describe('Pernyataan pribadi yang dipersonalisasi yang dihasilkan.'),
 });
 export type GeneratePersonalStatementOutput = z.infer<
   typeof GeneratePersonalStatementOutputSchema
@@ -45,13 +45,13 @@ const generatePersonalStatementPrompt = ai.definePrompt({
   name: 'generatePersonalStatementPrompt',
   input: {schema: GeneratePersonalStatementInputSchema},
   output: {schema: GeneratePersonalStatementOutputSchema},
-  prompt: `You are an expert personal statement writer. Generate a compelling personal statement based on the following information:
+  prompt: `Anda adalah seorang penulis pernyataan pribadi ahli. Buat pernyataan pribadi yang menarik berdasarkan informasi berikut:
 
-Skills: {{{skills}}}
-Experience: {{{experience}}}
-Target Audience: {{{targetAudience}}}
+Keahlian: {{{skills}}}
+Pengalaman: {{{experience}}}
+Target Audiens: {{{targetAudience}}}
 
-Write a personal statement that is tailored to the target audience and highlights the relevant skills and experience.`,
+Tulis pernyataan pribadi yang disesuaikan dengan target audiens dan menonjolkan keahlian dan pengalaman yang relevan.`,
 });
 
 const generatePersonalStatementFlow = ai.defineFlow(

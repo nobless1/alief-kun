@@ -12,10 +12,23 @@ import {
 import type { LucideIcon } from 'lucide-react';
 import { PlaceHolderImages } from './placeholder-images';
 
+function calculateAge(birthDate: string) {
+  const today = new Date();
+  const birth = new Date(birthDate);
+  let age = today.getFullYear() - birth.getFullYear();
+  const m = today.getMonth() - birth.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
+  return age;
+}
+
+const age = calculateAge('2004-09-09');
+
 export const profile = {
   name: 'alief',
-  title: 'Head Barista & Coffee Artisan',
-  bio: 'A passionate barista with a deep love for the art and science of coffee. Dedicated to crafting the perfect cup and creating memorable experiences for every customer.',
+  title: 'Kepala Barista & Pengrajin Kopi',
+  bio: `Seorang barista berumur ${age} tahun yang bersemangat dengan kecintaan mendalam pada seni dan ilmu kopi. Berdedikasi untuk menciptakan cangkir yang sempurna dan pengalaman yang tak terlupakan bagi setiap pelanggan.`,
   email: 'hello@alief.coffee',
   social: {
     github: 'https://github.com',
@@ -43,9 +56,9 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'The Morning Grind Blog',
-    description: 'A personal blog where I share brewing guides, coffee bean reviews, and my thoughts on the coffee industry. Built to connect with fellow coffee lovers.',
-    technologies: ['Contentful', 'Markdown', 'SEO', 'Photography'],
+    title: 'Blog The Morning Grind',
+    description: 'Blog pribadi tempat saya berbagi panduan menyeduh, ulasan biji kopi, dan pemikiran saya tentang industri kopi. Dibangun untuk terhubung dengan sesama pecinta kopi.',
+    technologies: ['Contentful', 'Markdown', 'SEO', 'Fotografi'],
     links: {
       github: '#',
       live: '#',
@@ -53,9 +66,9 @@ export const projects: Project[] = [
     image: PlaceHolderImages.find((img) => img.id === 'project-one')!,
   },
   {
-    title: 'Latte Art Lookbook App',
-    description: 'A mobile-first web app showcasing a gallery of my best latte art. Includes tips and video tutorials for aspiring latte artists.',
-    technologies: ['React', 'Vite', 'PWA', 'Video Editing'],
+    title: 'Aplikasi Latte Art Lookbook',
+    description: 'Aplikasi web mobile-first yang menampilkan galeri seni latte terbaik saya. Termasuk tips dan tutorial video untuk calon seniman latte.',
+    technologies: ['React', 'Vite', 'PWA', 'Penyuntingan Video'],
     links: {
       github: '#',
       live: '#',
@@ -63,9 +76,9 @@ export const projects: Project[] = [
     image: PlaceHolderImages.find((img) => img.id === 'project-two')!,
   },
   {
-    title: 'Cafe Workflow Optimizer',
-    description: 'A Notion-based system to track inventory, manage staff schedules, and streamline daily operations for a busy coffee shop.',
-    technologies: ['Notion API', 'Automation', 'Inventory Management'],
+    title: 'Pengoptimal Alur Kerja Kafe',
+    description: 'Sistem berbasis Notion untuk melacak inventaris, mengelola jadwal staf, dan merampingkan operasi harian untuk kedai kopi yang sibuk.',
+    technologies: ['Notion API', 'Otomatisasi', 'Manajemen Inventaris'],
     links: {
       github: '#',
       live: '#',
@@ -73,9 +86,9 @@ export const projects: Project[] = [
     image: PlaceHolderImages.find((img) => img.id === 'project-three')!,
   },
   {
-    title: 'Local Roaster Collab',
-    description: 'A pop-up event series in collaboration with local roasters to highlight unique single-origin beans and brewing methods.',
-    technologies: ['Event Planning', 'Social Media Marketing', 'Community Building'],
+    title: 'Kolaborasi Roaster Lokal',
+    description: 'Serangkaian acara pop-up bekerja sama dengan roaster lokal untuk menyoroti biji kopi single-origin yang unik dan metode penyeduhan.',
+    technologies: ['Perencanaan Acara', 'Pemasaran Media Sosial', 'Pembangunan Komunitas'],
     links: {
       github: '#',
       live: '#',
@@ -95,34 +108,34 @@ export type SkillCategory = {
 
 export const skills: SkillCategory[] = [
   {
-    name: 'Coffee Brewing',
+    name: 'Penyeduhan Kopi',
     icon: Coffee,
     skills: [
-      { name: 'Espresso Extraction & Dialing-In', level: 95 },
+      { name: 'Ekstraksi Espresso & Dialing-In', level: 95 },
       { name: 'Pour-Over (V60, Chemex)', level: 90 },
       { name: 'Aeropress & French Press', level: 85 },
-      { name: 'Cold Brew Science', level: 90 },
-      { name: 'Manual & Automatic Grinders', level: 98 },
+      { name: 'Ilmu Cold Brew', level: 90 },
+      { name: 'Penggiling Manual & Otomatis', level: 98 },
     ],
   },
   {
-    name: 'Latte Art',
+    name: 'Seni Latte',
     icon: Heart,
     skills: [
-      { name: 'Milk Steaming & Microfoam', level: 95 },
-      { name: 'Heart & Tulip Patterns', level: 90 },
-      { name: 'Rosetta & Swan Patterns', level: 80 },
-      { name: 'Free Pouring Techniques', level: 85 },
+      { name: 'Steaming Susu & Microfoam', level: 95 },
+      { name: 'Pola Hati & Tulip', level: 90 },
+      { name: 'Pola Rosetta & Angsa', level: 80 },
+      { name: 'Teknik Free Pouring', level: 85 },
     ],
   },
   {
-    name: 'Customer Service',
+    name: 'Pelayanan Pelanggan',
     icon: Award,
     skills: [
-      { name: 'Coffee Knowledge & Education', level: 95 },
-      { name: 'Order Management (POS Systems)', level: 90 },
-      { name: 'Building Customer Rapport', level: 100 },
-      { name: 'Upselling & Recommendations', level: 85 },
+      { name: 'Pengetahuan & Edukasi Kopi', level: 95 },
+      { name: 'Manajemen Pesanan (Sistem POS)', level: 90 },
+      { name: 'Membangun Hubungan Baik dengan Pelanggan', level: 100 },
+      { name: 'Upselling & Rekomendasi', level: 85 },
     ],
   },
 ];
@@ -139,34 +152,34 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     type: 'work',
-    title: 'Head Barista',
+    title: 'Kepala Barista',
     company: 'The Daily Grind',
-    date: 'Jan 2021 - Present',
-    description: 'Leading a team of baristas, curating the coffee menu, and maintaining quality standards. Responsible for training and inventory management.',
+    date: 'Jan 2021 - Sekarang',
+    description: 'Memimpin tim barista, menyusun menu kopi, dan menjaga standar kualitas. Bertanggung jawab atas pelatihan dan manajemen inventaris.',
     icon: Briefcase,
   },
   {
     type: 'work',
     title: 'Barista',
     company: 'Artisan Roast Cafe',
-    date: 'Jun 2018 - Dec 2020',
-    description: 'Honed my skills in espresso preparation and latte art. Developed a strong understanding of different brewing methods and customer preferences.',
+    date: 'Jun 2018 - Des 2020',
+    description: 'Mengasah keterampilan saya dalam persiapan espresso dan seni latte. Mengembangkan pemahaman yang kuat tentang berbagai metode penyeduhan dan preferensi pelanggan.',
     icon: Coffee,
   },
   {
     type: 'education',
-    title: 'Certified Barista',
+    title: 'Barista Bersertifikat',
     company: 'Specialty Coffee Association (SCA)',
-    date: 'May 2018',
-    description: 'Completed the SCA Barista Skills Foundation and Intermediate levels, covering coffee origins, brewing, and sensory skills.',
+    date: 'Mei 2018',
+    description: 'Menyelesaikan tingkat Foundation dan Intermediate Keterampilan Barista SCA, mencakup asal-usul kopi, penyeduhan, dan keterampilan sensorik.',
     icon: GraduationCap,
   },
 ];
 
 export const navigation = [
-  { name: 'Creations', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Journey', href: '#experience' },
-  { name: 'AI Generator', href: '#ai-generator' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Kreasi', href: '#projects' },
+  { name: 'Keahlian', href: '#skills' },
+  { name: 'Perjalanan', href: '#experience' },
+  { name: 'Generator AI', href: '#ai-generator' },
+  { name: 'Kontak', href: '#contact' },
 ];

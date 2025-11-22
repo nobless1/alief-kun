@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'alief - The Coffee Craftsman',
-  description: 'Explore the portfolio of a passionate barista, showcasing skills in coffee brewing, latte art, and customer experience.',
+  title: 'alief - Pengrajin Kopi',
+  description: 'Jelajahi portofolio seorang barista yang bersemangat, menampilkan keahlian dalam menyeduh kopi, seni latte, dan pengalaman pelanggan.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="id" className="!scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

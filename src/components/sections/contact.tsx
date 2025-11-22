@@ -11,9 +11,9 @@ import { useToast } from '@/hooks/use-toast';
 import { Send } from 'lucide-react';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+  name: z.string().min(2, { message: 'Nama harus memiliki setidaknya 2 karakter.' }),
+  email: z.string().email({ message: 'Harap masukkan alamat email yang valid.' }),
+  message: z.string().min(10, { message: 'Pesan harus memiliki setidaknya 10 karakter.' }),
 });
 
 export function Contact() {
@@ -30,8 +30,8 @@ export function Contact() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: 'Message Sent!',
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      title: 'Pesan Terkirim!',
+      description: "Terima kasih telah menghubungi. Saya akan segera menghubungi Anda kembali.",
     });
     form.reset();
   }
@@ -41,10 +41,10 @@ export function Contact() {
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-            Get In Touch
+            Hubungi Saya
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Have a question, a project proposal, or just want to say hello? I'd love to hear from you.
+            Punya pertanyaan, proposal proyek, atau hanya ingin menyapa? Saya ingin mendengar dari Anda.
           </p>
         </div>
         <div className="mx-auto max-w-xl">
@@ -55,9 +55,9 @@ export function Contact() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Nama</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your Name" {...field} />
+                      <Input placeholder="Nama Anda" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -70,7 +70,7 @@ export function Contact() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="your.email@example.com" {...field} />
+                      <Input placeholder="email.anda@contoh.com" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -81,9 +81,9 @@ export function Contact() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel>Pesan</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Your message..." rows={5} {...field} />
+                      <Textarea placeholder="Pesan Anda..." rows={5} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -91,7 +91,7 @@ export function Contact() {
               />
               <Button type="submit" className="w-full">
                 <Send className="mr-2 h-4 w-4" />
-                Send Message
+                Kirim Pesan
               </Button>
             </form>
           </Form>

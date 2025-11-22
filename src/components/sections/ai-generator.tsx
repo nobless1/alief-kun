@@ -22,7 +22,7 @@ function SubmitButton() {
   return (
     <Button type="submit" disabled={pending} className="w-full">
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Bot className="mr-2 h-4 w-4" />}
-      {pending ? 'Generating...' : 'Generate Statement'}
+      {pending ? 'Menghasilkan...' : 'Hasilkan Pernyataan'}
     </Button>
   );
 }
@@ -34,10 +34,10 @@ export function AiGenerator() {
   const [generatedStatement, setGeneratedStatement] = useState<string | null>(null);
 
   useEffect(() => {
-    if (state.message?.startsWith('Success')) {
+    if (state.message?.startsWith('Sukses')) {
       toast({
-        title: 'Statement Generated!',
-        description: 'Your personal statement has been successfully created.',
+        title: 'Pernyataan Dihasilkan!',
+        description: 'Pernyataan pribadi Anda telah berhasil dibuat.',
       });
       setGeneratedStatement(state.personalStatement);
       formRef.current?.reset();
@@ -55,48 +55,48 @@ export function AiGenerator() {
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-            AI Personal Statement Generator
+            Generator Pernyataan Pribadi AI
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Struggling with your personal statement? Use this AI tool to generate a draft tailored to your skills, experience, and target audience.
+            Kesulitan dengan pernyataan pribadi Anda? Gunakan alat AI ini untuk menghasilkan draf yang disesuaikan dengan keahlian, pengalaman, dan target audiens Anda.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           <Card>
             <form action={formAction} ref={formRef}>
               <CardHeader>
-                <CardTitle className="font-headline">Your Information</CardTitle>
-                <CardDescription>Provide details to personalize your statement.</CardDescription>
+                <CardTitle className="font-headline">Informasi Anda</CardTitle>
+                <CardDescription>Berikan detail untuk mempersonalisasi pernyataan Anda.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="skills">Skills</Label>
+                  <Label htmlFor="skills">Keahlian</Label>
                   <Textarea
                     id="skills"
                     name="skills"
-                    placeholder="e.g., React, Node.js, Project Management, UI/UX Design..."
+                    placeholder="misalnya, React, Node.js, Manajemen Proyek, Desain UI/UX..."
                     rows={3}
                     required
                   />
                   {state.errors?.skills && <p className="text-sm text-destructive">{state.errors.skills[0]}</p>}
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="experience">Experience Summary</Label>
+                  <Label htmlFor="experience">Ringkasan Pengalaman</Label>
                   <Textarea
                     id="experience"
                     name="experience"
-                    placeholder="Briefly describe your work history, key projects, and accomplishments."
+                    placeholder="Jelaskan secara singkat riwayat kerja, proyek utama, dan pencapaian Anda."
                     rows={5}
                     required
                   />
                    {state.errors?.experience && <p className="text-sm text-destructive">{state.errors.experience[0]}</p>}
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="targetAudience">Target Audience</Label>
+                  <Label htmlFor="targetAudience">Target Audiens</Label>
                   <Textarea
                     id="targetAudience"
                     name="targetAudience"
-                    placeholder="e.g., Recruiters at a tech startup, graduate school admissions committee..."
+                    placeholder="misalnya, Perekrut di startup teknologi, komite penerimaan sekolah pascasarjana..."
                     rows={2}
                     required
                   />
@@ -111,8 +111,8 @@ export function AiGenerator() {
           <Card className="min-h-[400px] flex flex-col">
             <CardHeader className="flex flex-row items-center justify-between">
               <div>
-                <CardTitle className="font-headline">Generated Statement</CardTitle>
-                <CardDescription>Your AI-crafted personal statement will appear here.</CardDescription>
+                <CardTitle className="font-headline">Pernyataan yang Dihasilkan</CardTitle>
+                <CardDescription>Pernyataan pribadi buatan AI Anda akan muncul di sini.</CardDescription>
               </div>
               <CopyButton textToCopy={generatedStatement || ''} />
             </CardHeader>
@@ -120,7 +120,7 @@ export function AiGenerator() {
               <Textarea
                 readOnly
                 value={generatedStatement || ''}
-                placeholder="Awaiting generation..."
+                placeholder="Menunggu pembuatan..."
                 className="w-full h-full resize-none text-base"
               />
             </CardContent>

@@ -24,14 +24,14 @@ export function CopyButton({ textToCopy, className }: { textToCopy: string; clas
     navigator.clipboard.writeText(textToCopy).then(() => {
       setHasCopied(true);
       toast({
-        title: 'Copied to clipboard!',
-        description: "You can now paste the personal statement.",
+        title: 'Disalin ke clipboard!',
+        description: "Anda sekarang dapat menempelkan pernyataan pribadi.",
       });
     }).catch(err => {
-      console.error('Failed to copy text: ', err);
+      console.error('Gagal menyalin teks: ', err);
       toast({
-        title: 'Failed to copy',
-        description: 'Could not copy text to clipboard.',
+        title: 'Gagal menyalin',
+        description: 'Tidak dapat menyalin teks ke clipboard.',
         variant: 'destructive'
       });
     });
@@ -39,7 +39,7 @@ export function CopyButton({ textToCopy, className }: { textToCopy: string; clas
 
   return (
     <Button size="icon" variant="ghost" onClick={copyToClipboard} disabled={!textToCopy} className={cn(className)}>
-      <span className="sr-only">Copy</span>
+      <span className="sr-only">Salin</span>
       {hasCopied ? <Check className="h-4 w-4 text-emerald-500" /> : <Copy className="h-4 w-4" />}
     </Button>
   );

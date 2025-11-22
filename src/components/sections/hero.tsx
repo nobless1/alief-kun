@@ -16,12 +16,12 @@ export function Hero() {
           </p>
           <div className="flex gap-4">
             <Button asChild>
-              <a href="#projects">View My Creations</a>
+              <a href="#projects">Lihat Kreasi Saya</a>
             </Button>
             <Button variant="outline" asChild>
               <a href={`mailto:${profile.email}`}>
                 <profile.socialIcons.mail className="mr-2 h-4 w-4" />
-                Contact Me
+                Hubungi Saya
               </a>
             </Button>
           </div>

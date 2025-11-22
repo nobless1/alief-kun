@@ -13,10 +13,10 @@ export function Skills() {
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-            My Barista Skills
+            Keahlian Barista Saya
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I have a diverse set of skills, from technical brewing knowledge to the art of creating a welcoming cafe atmosphere.
+            Saya memiliki beragam keahlian, mulai dari pengetahuan teknis menyeduh hingga seni menciptakan suasana kafe yang ramah.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-items-center">

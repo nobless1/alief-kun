@@ -34,7 +34,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
            <Button asChild className="hidden md:flex">
-            <a href="#contact">Get in Touch</a>
+            <a href="#contact">Hubungi Saya</a>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -43,7 +43,7 @@ export function Header() {
                 className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
               >
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
+                <span className="sr-only">Buka Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="pr-0">
@@ -64,7 +64,7 @@ export function Header() {
                     </Link>
                   ))}
                    <Button asChild>
-                    <a href="#contact">Get in Touch</a>
+                    <a href="#contact">Hubungi Saya</a>
                   </Button>
                 </div>
               </div>
