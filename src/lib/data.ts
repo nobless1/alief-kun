@@ -17,6 +17,7 @@ export const profile = {
   title: 'Barista Junior & Pecinta Kopi',
   bio: `Seorang barista junior yang antusias, dengan semangat besar untuk belajar seni dan ilmu kopi. Berkomitmen untuk menyajikan kopi terbaik dan memberikan pengalaman menyenangkan bagi pelanggan.`,
   email: 'hello@alief.coffee',
+  image: PlaceHolderImages.find((img) => img.id === 'profile-picture')!,
   social: {
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',

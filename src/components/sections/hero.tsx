@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { profile } from '@/lib/data';
 
@@ -7,6 +8,17 @@ export function Hero() {
     <section id="home" className="bg-secondary/50 border-b flex items-center justify-center">
       <div className="container flex flex-col items-center justify-center space-y-4 text-center">
         <div className="flex flex-col items-center space-y-6">
+          {profile.image && (
+            <div className="relative w-32 h-32 rounded-full overflow-hidden">
+              <Image
+                src={profile.image.imageUrl}
+                alt={profile.name}
+                fill
+                className="object-cover"
+                data-ai-hint={profile.image.imageHint}
+              />
+            </div>
+          )}
           <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
             Alief
           </h1>
